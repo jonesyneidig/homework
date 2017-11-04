@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>READING RAILROAD SCHEDULE</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js">
+	</script>
+
+	<!-- Firebase Reference -->
+	<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+
+	<!-- Moment.js Reference -->
+	<!-- <script src="http://momentjs.com/downloads/moment.js"></script> -->	
+ 	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+ 	<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+	<div class = "jumbotron">
+		<h1>READING RAILROAD SCHEDULE</h1>
+		<img src="assets/images/railroad.png">
+	</div>
+	<div class="container schedule-container">
+          <div class="row">
+
+              <!-- Sign-Up Panel-->
+              <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+                   <div class="panel panel-success">
+                        <div class="panel-heading">
+                             <h3 class="panel-title">Current Train Schedule</h3>
+                        </div>
+                        <div class="panel-body">
+
+                             <!-- Sign-up Form (note the various input "types")-->
+                        <table class="train-schedule">
+                             <tr>
+                                  <th class="col-xs-2">Train Name
+                                  </th>
+                                  <th class="col-xs-2">Destination
+                                  </th>
+                                  <th class="col-xs-2">Frequency (min)
+                                  </th>
+                                  <th class="col-xs-2">Next Arrival
+                                  </th>
+                                  <th class="col-xs-2">Minutes Away
+                                  </th>
+                             </tr>
+                        </table>
+
+                        </div>  <!-- closes panel-body -->
+                   </div> <!-- closes panel-default -->
+              </div> <!-- closes col-lg-6 -->
+         </div> <!-- closes row -->
+    </div>  <!-- closes container -->
+
+     <div class="container input-container">
+          <div class="row">
+
+              <!-- Sign-Up Panel-->
+              <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+                   <div class="panel panel-success">
+                        <div class="panel-heading">
+                             <h3 class="panel-title">Add Train</h3>
+                        </div>
+                        <div class="panel-body">
+
+                             <!-- Sign-up Form (note the various input "types")-->
+                             <form data-toggle="validator" role="form">
+                               <div class="form-group">
+                                 <label for="text">Train Name</label>
+                                 <input type="text" pattern="^[_A-z0-9]{1,}$" class="form-control" id="trainName">
+                               </div>
+                               <div class="form-group">
+                                 <label for="text">Destination</label>
+                                 <input type="text" class="form-control" id="destination-input">
+                               </div>
+                               <div class="form-group">
+                                 <label for="text">First Train Time (HH:mm - military time)</label>
+                                 <input type="text" class="form-control" id="trainFirstTime">
+                               </div>
+                               <div class="form-group">
+                                 <label for="comment">Frequency (min)</label>
+                                 <input type="text" class="form-control" id="frequency-input">
+                               </div>
+                               <button type="submit" class="btn btn-success" id="submit">Submit</button>
+                             </form>
+
+                        </div>  <!-- closes panel-body -->
+                   </div> <!-- closes panel-default -->
+              </div> <!-- closes col-lg-6 -->
+         </div> <!-- closes row -->
+    </div>  <!-- closes container -->
+        <script src="assets/app.js"></script>
+    </body>
+  </html>
